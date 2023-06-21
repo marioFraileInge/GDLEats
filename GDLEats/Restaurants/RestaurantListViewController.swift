@@ -7,7 +7,6 @@
 //  Using Swift 5.0
 //
         
-
 import UIKit
 
 class RestaurantListViewController: UIViewController, UICollectionViewDelegate {
@@ -78,10 +77,13 @@ extension RestaurantListViewController: UICollectionViewDataSource {
             Task {
                 guard let url = URL(string: imageURL)
                 else {
+                   
                     return
                 }
                 let (imageData, response) = try await URLSession.shared.data(from: url)
                 guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
+                   
+
                     return
                 }
                 guard let cellImage = UIImage(data: imageData) else {

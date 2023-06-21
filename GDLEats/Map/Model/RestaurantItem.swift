@@ -11,7 +11,7 @@ import UIKit
 import MapKit
 
 class RestaurantItem: NSObject, MKAnnotation, Decodable {
-   
+    
     let name: String?
     let cuisines: [String]
     let lat: Double?
@@ -22,7 +22,7 @@ class RestaurantItem: NSObject, MKAnnotation, Decodable {
     let imageURL: String?
     let restaurantID: Int?
     
-    enum Codingkeys: String, CodingKey {
+    enum CodingKeys: String, CodingKey {
         case name
         case cuisines
         case lat
@@ -45,7 +45,7 @@ class RestaurantItem: NSObject, MKAnnotation, Decodable {
         name
     }
     
-    var subtitle: String?{
+    var subtitle: String? {
         if cuisines.isEmpty {
             return ""
         } else if cuisines.count == 1 {
