@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D52B94B12A6617B200688F66 /* RatingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52B94B02A6617B200688F66 /* RatingsView.swift */; };
+		D52B94B32A661E9700688F66 /* ReviewFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52B94B22A661E9700688F66 /* ReviewFormViewController.swift */; };
 		D538D6C62A324BE5005C7999 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D538D6C52A324BE5005C7999 /* AppDelegate.swift */; };
 		D538D6C82A324BE5005C7999 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D538D6C72A324BE5005C7999 /* SceneDelegate.swift */; };
 		D538D6CD2A324BE5005C7999 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D538D6CB2A324BE5005C7999 /* Main.storyboard */; };
@@ -74,6 +76,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D52B94B02A6617B200688F66 /* RatingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingsView.swift; sourceTree = "<group>"; };
+		D52B94B22A661E9700688F66 /* ReviewFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewFormViewController.swift; sourceTree = "<group>"; };
 		D538D6C22A324BE5005C7999 /* GDLEats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GDLEats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D538D6C52A324BE5005C7999 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D538D6C72A324BE5005C7999 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -290,6 +294,8 @@
 			isa = PBXGroup;
 			children = (
 				D5803CE22A3D1F6D003E14FB /* ReviewForm.storyboard */,
+				D52B94B02A6617B200688F66 /* RatingsView.swift */,
+				D52B94B22A661E9700688F66 /* ReviewFormViewController.swift */,
 			);
 			path = ReviewForm;
 			sourceTree = "<group>";
@@ -529,7 +535,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D52B94B32A661E9700688F66 /* ReviewFormViewController.swift in Sources */,
 				D5A7B1442A41177D004E49E2 /* LocationItem.swift in Sources */,
+				D52B94B12A6617B200688F66 /* RatingsView.swift in Sources */,
 				D5A7B1462A411EB7004E49E2 /* ExploreHeaderView.swift in Sources */,
 				D5862D082A37C8FE00B442B9 /* ExploreItem.swift in Sources */,
 				D5803CD82A3D0795003E14FB /* DataManager.swift in Sources */,
