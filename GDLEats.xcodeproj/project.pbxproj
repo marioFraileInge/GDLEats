@@ -15,6 +15,14 @@
 		D52B94BC2A662A1E00688F66 /* ImageFiltering.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52B94BB2A662A1E00688F66 /* ImageFiltering.swift */; };
 		D52B94BE2A6716FA00688F66 /* FilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52B94BD2A6716FA00688F66 /* FilterCell.swift */; };
 		D52B94C02A67180C00688F66 /* PhotoFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52B94BF2A67180C00688F66 /* PhotoFilterViewController.swift */; };
+		D52B94C52A67209E00688F66 /* GDLEatsModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D52B94C32A67209E00688F66 /* GDLEatsModel.xcdatamodeld */; };
+		D52B94C82A67221F00688F66 /* ReviewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52B94C72A67221F00688F66 /* ReviewItem.swift */; };
+		D52B94CA2A67240F00688F66 /* RestaurantPhotoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52B94C92A67240F00688F66 /* RestaurantPhotoItem.swift */; };
+		D52B94CC2A6725E200688F66 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52B94CB2A6725E200688F66 /* CoreDataManager.swift */; };
+		D52B94CF2A672A8700688F66 /* ReviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52B94CE2A672A8700688F66 /* ReviewCell.swift */; };
+		D52B94D12A672B0B00688F66 /* ReviewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52B94D02A672B0B00688F66 /* ReviewsViewController.swift */; };
+		D52B94D42A67333400688F66 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52B94D32A67333400688F66 /* PhotoCell.swift */; };
+		D52B94D62A6733C300688F66 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52B94D52A6733C300688F66 /* PhotosViewController.swift */; };
 		D538D6C62A324BE5005C7999 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D538D6C52A324BE5005C7999 /* AppDelegate.swift */; };
 		D538D6C82A324BE5005C7999 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D538D6C72A324BE5005C7999 /* SceneDelegate.swift */; };
 		D538D6CD2A324BE5005C7999 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D538D6CB2A324BE5005C7999 /* Main.storyboard */; };
@@ -90,6 +98,14 @@
 		D52B94BB2A662A1E00688F66 /* ImageFiltering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFiltering.swift; sourceTree = "<group>"; };
 		D52B94BD2A6716FA00688F66 /* FilterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCell.swift; sourceTree = "<group>"; };
 		D52B94BF2A67180C00688F66 /* PhotoFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoFilterViewController.swift; sourceTree = "<group>"; };
+		D52B94C42A67209E00688F66 /* GDLEatsModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GDLEatsModel.xcdatamodel; sourceTree = "<group>"; };
+		D52B94C72A67221F00688F66 /* ReviewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewItem.swift; sourceTree = "<group>"; };
+		D52B94C92A67240F00688F66 /* RestaurantPhotoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantPhotoItem.swift; sourceTree = "<group>"; };
+		D52B94CB2A6725E200688F66 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		D52B94CE2A672A8700688F66 /* ReviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCell.swift; sourceTree = "<group>"; };
+		D52B94D02A672B0B00688F66 /* ReviewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsViewController.swift; sourceTree = "<group>"; };
+		D52B94D32A67333400688F66 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		D52B94D52A6733C300688F66 /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
 		D538D6C22A324BE5005C7999 /* GDLEats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GDLEats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D538D6C52A324BE5005C7999 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D538D6C72A324BE5005C7999 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -174,8 +190,44 @@
 				D52B94B52A6628BA00688F66 /* FilterData.plist */,
 				D52B94B72A6628D000688F66 /* FilterItem.swift */,
 				D52B94B92A66296300688F66 /* FilterDataManager.swift */,
+				D52B94C92A67240F00688F66 /* RestaurantPhotoItem.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		D52B94C22A67207C00688F66 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				D52B94C32A67209E00688F66 /* GDLEatsModel.xcdatamodeld */,
+				D52B94CB2A6725E200688F66 /* CoreDataManager.swift */,
+			);
+			path = "Core Data";
+			sourceTree = "<group>";
+		};
+		D52B94C62A67220300688F66 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D52B94C72A67221F00688F66 /* ReviewItem.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D52B94CD2A672A5500688F66 /* Reviews */ = {
+			isa = PBXGroup;
+			children = (
+				D52B94CE2A672A8700688F66 /* ReviewCell.swift */,
+				D52B94D02A672B0B00688F66 /* ReviewsViewController.swift */,
+			);
+			path = Reviews;
+			sourceTree = "<group>";
+		};
+		D52B94D22A67330400688F66 /* RestaurantPhotos */ = {
+			isa = PBXGroup;
+			children = (
+				D52B94D32A67333400688F66 /* PhotoCell.swift */,
+				D52B94D52A6733C300688F66 /* PhotosViewController.swift */,
+			);
+			path = RestaurantPhotos;
 			sourceTree = "<group>";
 		};
 		D538D6B92A324BE5005C7999 = {
@@ -201,6 +253,8 @@
 		D538D6C42A324BE5005C7999 /* GDLEats */ = {
 			isa = PBXGroup;
 			children = (
+				D52B94D22A67330400688F66 /* RestaurantPhotos */,
+				D52B94CD2A672A5500688F66 /* Reviews */,
 				D5803CDF2A3D1F48003E14FB /* PhotoFilter */,
 				D5803CDE2A3D1F38003E14FB /* ReviewForm */,
 				D5803CDB2A3D1EAE003E14FB /* RestaurantDetail */,
@@ -295,6 +349,7 @@
 		D5803CD52A3D0750003E14FB /* Misc */ = {
 			isa = PBXGroup;
 			children = (
+				D52B94C22A67207C00688F66 /* Core Data */,
 				D565E73A2A422D7E003FECEB /* No Data */,
 				D5FB04EC2A3E0F2B0024B9A9 /* JSON */,
 				D5803CD72A3D0795003E14FB /* DataManager.swift */,
@@ -315,6 +370,7 @@
 		D5803CDE2A3D1F38003E14FB /* ReviewForm */ = {
 			isa = PBXGroup;
 			children = (
+				D52B94C62A67220300688F66 /* Model */,
 				D5803CE22A3D1F6D003E14FB /* ReviewForm.storyboard */,
 				D52B94B02A6617B200688F66 /* RatingsView.swift */,
 				D52B94B22A661E9700688F66 /* ReviewFormViewController.swift */,
@@ -566,20 +622,27 @@
 				D5A7B1442A41177D004E49E2 /* LocationItem.swift in Sources */,
 				D52B94B12A6617B200688F66 /* RatingsView.swift in Sources */,
 				D5A7B1462A411EB7004E49E2 /* ExploreHeaderView.swift in Sources */,
+				D52B94D62A6733C300688F66 /* PhotosViewController.swift in Sources */,
 				D5862D082A37C8FE00B442B9 /* ExploreItem.swift in Sources */,
 				D52B94C02A67180C00688F66 /* PhotoFilterViewController.swift in Sources */,
+				D52B94C52A67209E00688F66 /* GDLEatsModel.xcdatamodeld in Sources */,
+				D52B94D12A672B0B00688F66 /* ReviewsViewController.swift in Sources */,
 				D52B94BE2A6716FA00688F66 /* FilterCell.swift in Sources */,
 				D52B94BC2A662A1E00688F66 /* ImageFiltering.swift in Sources */,
 				D5803CD82A3D0795003E14FB /* DataManager.swift in Sources */,
 				D5803CD42A3CF383003E14FB /* MapDataManager.swift in Sources */,
+				D52B94CC2A6725E200688F66 /* CoreDataManager.swift in Sources */,
 				D565E73C2A4231F0003FECEB /* NoDataView.swift in Sources */,
 				D5E9BBAA2A3BCD030015E504 /* LocationDataManager.swift in Sources */,
 				D5FB050B2A3E14C40024B9A9 /* RestaurantDataManager.swift in Sources */,
 				D538D6C62A324BE5005C7999 /* AppDelegate.swift in Sources */,
 				D5803CE52A3D23F1003E14FB /* Segue.swift in Sources */,
+				D52B94C82A67221F00688F66 /* ReviewItem.swift in Sources */,
 				D565E7392A422BB6003FECEB /* RestaurantCell.swift in Sources */,
 				D52B94BA2A66296300688F66 /* FilterDataManager.swift in Sources */,
 				D538D6FC2A3286E1005C7999 /* RestaurantListViewController.swift in Sources */,
+				D52B94D42A67333400688F66 /* PhotoCell.swift in Sources */,
+				D52B94CA2A67240F00688F66 /* RestaurantPhotoItem.swift in Sources */,
 				D5803CE72A3D28DF003E14FB /* RestaurantDetailViewController.swift in Sources */,
 				D52B94B82A6628D000688F66 /* FilterItem.swift in Sources */,
 				D5803CDA2A3D0B8E003E14FB /* MapViewController.swift in Sources */,
@@ -587,6 +650,7 @@
 				D538D6F92A3256F6005C7999 /* EploreViewController.swift in Sources */,
 				D5862D0A2A37CA2300B442B9 /* ExploreDataManager.swift in Sources */,
 				D5803CD22A3CEDB7003E14FB /* RestaurantItem.swift in Sources */,
+				D52B94CF2A672A8700688F66 /* ReviewCell.swift in Sources */,
 				D5862D0D2A37CEC300B442B9 /* ExploreCell.swift in Sources */,
 				D5E9BBA62A3BAC3C0015E504 /* LocationViewController.swift in Sources */,
 			);
@@ -932,6 +996,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D52B94C32A67209E00688F66 /* GDLEatsModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D52B94C42A67209E00688F66 /* GDLEatsModel.xcdatamodel */,
+			);
+			currentVersion = D52B94C42A67209E00688F66 /* GDLEatsModel.xcdatamodel */;
+			path = GDLEatsModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = D538D6BA2A324BE5005C7999 /* Project object */;
 }

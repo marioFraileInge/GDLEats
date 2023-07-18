@@ -34,6 +34,20 @@ class RestaurantDetailViewController: UITableViewController {
         super.viewDidLoad()
         initialize()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let identifier = segue.identifier {
+            switch identifier {
+            case Segue.showReview.rawValue:
+                showReview(segue: segue)
+            case Segue.showPhotoFilter.rawValue:
+                showPhotoFilter(segue: segue)
+            default:
+                print("Segue not added")
+            }
+        }
+    }
 }
 
 private extension RestaurantDetailViewController {
@@ -48,9 +62,32 @@ private extension RestaurantDetailViewController {
         
     }
     
+    func showReview(segue: UIStoryboardSegue) {
+        guard let navController = segue.destination as? UINavigationController, let viewController = navController.topViewController as? ReviewFormViewController else {
+            return
+        }
+        viewController.selectedRestaurantID = selectedRestaurant?.restaurantID
+    }
+    
+    func showPhotoFilter(segue: UIStoryboardSegue) {
+        guard let navController = segue.destination as? UINavigationController, let viewController = navController.topViewController as? PhotoFilterViewController else {
+            return
+        }
+        viewController.selectedRestaurantID = selectedRestaurant?.restaurantID
+    }
+    
     func createRating() {
-        ratingsView.rating = 3.5
-        ratingsView.isEnabled = true
+        ratingsView.isEnabled = false
+        if let restaurantID = selectedRestaurant?.restaurantID {
+            let ratingValue = CoreDataManager.shared.fetchRestaurantRating(by: restaurantID)
+            ratingsView.rating = ratingValue
+            if ratingValue.isNaN {
+                overallRatingLabel.text = "0.0"
+            } else {
+                let roundedValue = ((ratingValue * 10).rounded() / 10)
+                overallRatingLabel.text = "\(roundedValue)"
+            }
+        }
     }
     
     func setupLabels() {
