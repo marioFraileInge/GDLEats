@@ -10,7 +10,7 @@
 import Foundation
 import MapKit
 
-class MapDataManager: DataMananger {
+class MapDataManager: DataManager {
     
     private var items: [RestaurantItem] = []
     var annotations: [RestaurantItem] {

@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		D52B94B12A6617B200688F66 /* RatingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52B94B02A6617B200688F66 /* RatingsView.swift */; };
 		D52B94B32A661E9700688F66 /* ReviewFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52B94B22A661E9700688F66 /* ReviewFormViewController.swift */; };
+		D52B94B62A6628BA00688F66 /* FilterData.plist in Resources */ = {isa = PBXBuildFile; fileRef = D52B94B52A6628BA00688F66 /* FilterData.plist */; };
+		D52B94B82A6628D000688F66 /* FilterItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52B94B72A6628D000688F66 /* FilterItem.swift */; };
+		D52B94BA2A66296300688F66 /* FilterDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52B94B92A66296300688F66 /* FilterDataManager.swift */; };
+		D52B94BC2A662A1E00688F66 /* ImageFiltering.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52B94BB2A662A1E00688F66 /* ImageFiltering.swift */; };
+		D52B94BE2A6716FA00688F66 /* FilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52B94BD2A6716FA00688F66 /* FilterCell.swift */; };
+		D52B94C02A67180C00688F66 /* PhotoFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52B94BF2A67180C00688F66 /* PhotoFilterViewController.swift */; };
 		D538D6C62A324BE5005C7999 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D538D6C52A324BE5005C7999 /* AppDelegate.swift */; };
 		D538D6C82A324BE5005C7999 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D538D6C72A324BE5005C7999 /* SceneDelegate.swift */; };
 		D538D6CD2A324BE5005C7999 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D538D6CB2A324BE5005C7999 /* Main.storyboard */; };
@@ -78,6 +84,12 @@
 /* Begin PBXFileReference section */
 		D52B94B02A6617B200688F66 /* RatingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingsView.swift; sourceTree = "<group>"; };
 		D52B94B22A661E9700688F66 /* ReviewFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewFormViewController.swift; sourceTree = "<group>"; };
+		D52B94B52A6628BA00688F66 /* FilterData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FilterData.plist; sourceTree = "<group>"; };
+		D52B94B72A6628D000688F66 /* FilterItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterItem.swift; sourceTree = "<group>"; };
+		D52B94B92A66296300688F66 /* FilterDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterDataManager.swift; sourceTree = "<group>"; };
+		D52B94BB2A662A1E00688F66 /* ImageFiltering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFiltering.swift; sourceTree = "<group>"; };
+		D52B94BD2A6716FA00688F66 /* FilterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCell.swift; sourceTree = "<group>"; };
+		D52B94BF2A67180C00688F66 /* PhotoFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoFilterViewController.swift; sourceTree = "<group>"; };
 		D538D6C22A324BE5005C7999 /* GDLEats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GDLEats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D538D6C52A324BE5005C7999 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D538D6C72A324BE5005C7999 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -156,6 +168,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D52B94B42A6628A600688F66 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D52B94B52A6628BA00688F66 /* FilterData.plist */,
+				D52B94B72A6628D000688F66 /* FilterItem.swift */,
+				D52B94B92A66296300688F66 /* FilterDataManager.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		D538D6B92A324BE5005C7999 = {
 			isa = PBXGroup;
 			children = (
@@ -303,7 +325,11 @@
 		D5803CDF2A3D1F48003E14FB /* PhotoFilter */ = {
 			isa = PBXGroup;
 			children = (
+				D52B94B42A6628A600688F66 /* Model */,
 				D5803CE02A3D1F66003E14FB /* PhotoFilter.storyboard */,
+				D52B94BB2A662A1E00688F66 /* ImageFiltering.swift */,
+				D52B94BD2A6716FA00688F66 /* FilterCell.swift */,
+				D52B94BF2A67180C00688F66 /* PhotoFilterViewController.swift */,
 			);
 			path = PhotoFilter;
 			sourceTree = "<group>";
@@ -504,6 +530,7 @@
 				D5FB05022A3E10D80024B9A9 /* Miami.json in Resources */,
 				D5803CDD2A3D1F08003E14FB /* RestaurantDetail.storyboard in Resources */,
 				D5FB05042A3E10D80024B9A9 /* Los Angeles.json in Resources */,
+				D52B94B62A6628BA00688F66 /* FilterData.plist in Resources */,
 				D5FB05072A3E10D80024B9A9 /* Boston.json in Resources */,
 				D5803CE12A3D1F66003E14FB /* PhotoFilter.storyboard in Resources */,
 				D5FB05002A3E10D80024B9A9 /* New Orleans.json in Resources */,
@@ -540,6 +567,9 @@
 				D52B94B12A6617B200688F66 /* RatingsView.swift in Sources */,
 				D5A7B1462A411EB7004E49E2 /* ExploreHeaderView.swift in Sources */,
 				D5862D082A37C8FE00B442B9 /* ExploreItem.swift in Sources */,
+				D52B94C02A67180C00688F66 /* PhotoFilterViewController.swift in Sources */,
+				D52B94BE2A6716FA00688F66 /* FilterCell.swift in Sources */,
+				D52B94BC2A662A1E00688F66 /* ImageFiltering.swift in Sources */,
 				D5803CD82A3D0795003E14FB /* DataManager.swift in Sources */,
 				D5803CD42A3CF383003E14FB /* MapDataManager.swift in Sources */,
 				D565E73C2A4231F0003FECEB /* NoDataView.swift in Sources */,
@@ -548,8 +578,10 @@
 				D538D6C62A324BE5005C7999 /* AppDelegate.swift in Sources */,
 				D5803CE52A3D23F1003E14FB /* Segue.swift in Sources */,
 				D565E7392A422BB6003FECEB /* RestaurantCell.swift in Sources */,
+				D52B94BA2A66296300688F66 /* FilterDataManager.swift in Sources */,
 				D538D6FC2A3286E1005C7999 /* RestaurantListViewController.swift in Sources */,
 				D5803CE72A3D28DF003E14FB /* RestaurantDetailViewController.swift in Sources */,
+				D52B94B82A6628D000688F66 /* FilterItem.swift in Sources */,
 				D5803CDA2A3D0B8E003E14FB /* MapViewController.swift in Sources */,
 				D538D6C82A324BE5005C7999 /* SceneDelegate.swift in Sources */,
 				D538D6F92A3256F6005C7999 /* EploreViewController.swift in Sources */,

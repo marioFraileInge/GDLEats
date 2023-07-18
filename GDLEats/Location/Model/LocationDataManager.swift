@@ -9,7 +9,7 @@
 
 import Foundation
 
-class LocationDataManager: DataMananger {
+class LocationDataManager: DataManager {
     
     private var locations: [LocationItem] = []
     

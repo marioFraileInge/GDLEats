@@ -9,7 +9,7 @@
         
 import Foundation
 
-class ExploreDataManager: DataMananger {
+class ExploreDataManager: DataManager {
     
     private var exploreItems: [ExploreItem] = []
     
