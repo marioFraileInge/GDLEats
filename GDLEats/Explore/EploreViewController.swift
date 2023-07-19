@@ -19,6 +19,11 @@ class ExploreViewController: UIViewController,  UICollectionViewDelegate {
         initialize()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier! {
         case Segue.locationList.rawValue:
@@ -45,6 +50,15 @@ private extension ExploreViewController {
     
     func initialize() {
         manager.fetch()
+        setupCollectionView()
+    }
+    
+    func setupCollectionView() {
+        let flow = UICollectionViewFlowLayout()
+        flow.sectionInset = UIEdgeInsets(top: 7, left: 7, bottom: 7, right: 7)
+        flow.minimumInteritemSpacing = 0
+        flow.minimumLineSpacing = 7
+        collectionView.collectionViewLayout = flow
     }
     
     func showLocationList(segue: UIStoryboardSegue) {
@@ -103,3 +117,22 @@ extension ExploreViewController: UICollectionViewDataSource {
     }
 }
 
+extension ExploreViewController: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        var columns: CGFloat = 2
+        if Device.isPad || (traitCollection.horizontalSizeClass != .compact) {
+            columns = 3
+        }
+        let viewWidth = collectionView.frame.size.width
+        let inset = 7.0
+        let contentWidth = viewWidth - inset * (columns + 1)
+        let cellWidth = contentWidth / columns
+        let cellHeight = cellWidth
+        return CGSize(width: cellWidth, height: cellHeight)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        CGSize(width: collectionView.frame.width, height: 100)
+    }
+}

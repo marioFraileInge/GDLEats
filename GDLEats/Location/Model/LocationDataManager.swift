@@ -9,7 +9,7 @@
 
 import Foundation
 
-class LocationDataManager: DataManager {
+class LocationDataManager {
     
     private var locations: [LocationItem] = []
     
@@ -24,18 +24,16 @@ class LocationDataManager: DataManager {
     }
     
     func fetch() {
-        for location in loadData(){
+        for location in loadData() {
             locations.append(LocationItem(dict: location))
         }
     }
     
-    func numberOfLocationsItems() -> Int {
+    func numberOfLocationItems() -> Int {
         locations.count
     }
     
     func locationItem(at index: Int) -> LocationItem {
         locations[index]
     }
-    
-    
 }

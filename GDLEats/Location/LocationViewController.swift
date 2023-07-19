@@ -9,7 +9,7 @@
         
 import UIKit
 
-class LocationViewController: UIViewController, UITableViewDataSource {
+class LocationViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     let manager = LocationDataManager()
@@ -17,7 +17,7 @@ class LocationViewController: UIViewController, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        manager.fetch()
+        initialize()
     }
     
     private func setCheckmark(for cell: UITableViewCell, location: LocationItem) {
@@ -27,22 +27,36 @@ class LocationViewController: UIViewController, UITableViewDataSource {
             cell.accessoryType = .none
         }
     }
+
+}
+
+// MARK: Private Extension
+private extension LocationViewController {
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        manager.numberOfLocationsItems()
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(
-           withIdentifier: "locationCell", for: indexPath)
-        let location = manager.locationItem(at: indexPath.row )
-        cell.textLabel?.text = location.cityAndState
-        setCheckmark(for: cell, location: location)
-           return cell
+    func initialize() {
+        manager.fetch()
+        title = "Select a location"
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
 }
 
-//MARK: UITableViewDelegate
+// MARK: UITableViewDataSource
+extension LocationViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        manager.numberOfLocationItems()
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "locationCell", for: indexPath)
+        let location = manager.locationItem(at: indexPath.row)
+        cell.textLabel?.text = location.cityAndState
+        setCheckmark(for: cell, location: location)
+        return cell
+    }
+}
+
+// MARK: UITableViewDelegate
 extension LocationViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let cell = tableView.cellForRow(at: indexPath) {
@@ -52,4 +66,3 @@ extension LocationViewController: UITableViewDelegate {
         }
     }
 }
-

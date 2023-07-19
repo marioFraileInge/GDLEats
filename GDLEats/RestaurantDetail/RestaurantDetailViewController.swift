@@ -35,6 +35,12 @@ class RestaurantDetailViewController: UITableViewController {
         initialize()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        createRating()
+    }
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if let identifier = segue.identifier {

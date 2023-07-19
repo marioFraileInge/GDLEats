@@ -14,4 +14,10 @@ class ExploreCell: UICollectionViewCell {
     
     @IBOutlet weak var exploreImageView: UIImageView!
     @IBOutlet weak var exploreNameLabel: UILabel!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        exploreImageView.layer.cornerRadius = 9
+        exploreImageView.layer.masksToBounds = true
+    }
 }
